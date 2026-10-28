@@ -30,3 +30,16 @@ if int(even_number) % 2 == 0:
     print("You entered an even number.")
 else:
     print("You entered an odd number.")
+
+my_name = "Dolly"
+your_name = input("What is your name? ")
+if your_name == my_name:
+    print("Well, what are the chances in this crazy world!")
+elif your_name != my_name:
+    print("That's a shame. Dolly is the best name ever. Especially if you're a tuxedo cat!")
+
+your_height = int(input("What is your height in cm? "))
+if your_height > 145:
+    print("You are tall enough to ride the roller coaster.")
+else:
+    print("Sorry, you need to grow a little more first!")
