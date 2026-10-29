@@ -1,4 +1,6 @@
 # Exercise 1
+
+
 my_fave_numbers = {2, 3, 7, 11, 17, 21}
 my_fave_numbers.add(27) #adds one more number
 my_fave_numbers.add(30) #adds one more number
@@ -44,3 +46,29 @@ for i in range(1, 21): #prints numbers from 1 to 20
     for i in range(1, 21): #prints numbers from 1 to 20
         if i % 2 == 0: #checks if the number is even
             print(i) #prints the even number
+
+#Exercise 6
+
+while True:
+    name = input("What is your name? ") #Asks for the name
+    if len(name) < 3: #name needs to be a minimum of 3 characters long
+        print("Name needs to be at least 3 characters long.")
+    elif name.isdigit(): #checks that numbers were not entered
+        print("Name cannot be a number.")
+    else: #if the name is valid, it will print thank you and break the loop
+        print("Thank you")
+        break
+            
+#Exercise 7
+fave_fruits = input(
+    "What are your favorite fruits? Separate them with commas: "
+).lower().split(",") #asks for favorite fruits and splits them into a list and converts eveything to lower case
+
+fave_fruits = [fruit.strip() for fruit in fave_fruits] #removes any extra spaces from the fruits in the list
+
+fruit = input("Enter the name of a fruit: ").lower().strip() #asks user to enter more fruits
+
+if fruit in fave_fruits:
+    print("You chose one of your favorite fruits! Enjoy!") #if it matches the previous list they gave, it prints this message
+else:
+    print("You chose a new fruit. I hope you enjoy!") #if it is not, it will print this message
