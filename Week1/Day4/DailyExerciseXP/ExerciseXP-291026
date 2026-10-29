@@ -93,3 +93,22 @@ while True:
     print(f"Added {topping}!") #confirms what user just entered
     print(f"\nTotal toppings: {pizza_toppings_count}") #confirms total number of toppings
 print(f"Total cost: ${pizza_toppings_count * topping_price + base_price:.2f}") #confirms total cost of pizza with toppings and base price
+
+#Exercise 9
+total_cost = 0
+while True:
+    age = input("Enter your age (or type 'quit' to finish): ") #asks user to enter their age
+    if age.lower() == "quit": #if they type quit, it will break the loop
+        break
+
+    age = int(age) #converts the age to an integer
+    if age < 3: #if the age is less than 3, it will print that the ticket is free
+        print("This ticket is free.")
+    elif 3 <= age <= 12: #if the age is between 3 and 12, it will print the cost
+        print("This ticket is $10.")
+        total_cost += 10
+    else: #if the age is 13 or older, it will print the cost
+        print("This ticket is $15.")
+        total_cost += 15
+
+print(f"Total cost for all your tickets: ${total_cost:.2f}") #confirms total cost of all tickets
