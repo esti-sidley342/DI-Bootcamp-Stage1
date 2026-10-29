@@ -72,3 +72,24 @@ if fruit in fave_fruits:
     print("You chose one of your favorite fruits! Enjoy!") #if it matches the previous list they gave, it prints this message
 else:
     print("You chose a new fruit. I hope you enjoy!") #if it is not, it will print this message
+
+#Exercise 8
+base_price = 10.00
+topping_price = 2.50
+pizza_toppings_count = 0
+
+pizza_toppings = []
+while True:
+    topping = input("Enter a pizza topping (or type 'quit' to finish): ").lower().strip() #asks user to enter pizza toppings
+    if topping == "quit": #if they type quit, it will break the loop
+        break
+    else:
+        pizza_toppings.append(topping) #adds the topping to the list
+
+    pizza_toppings.append(topping) #adds the topping to the list
+    print(f"Adding {topping} to your pizza.") #prints the current list of toppings
+
+    pizza_toppings_count += 1 #increments the count of toppings by 1
+    print(f"Added {topping}!") #confirms what user just entered
+    print(f"\nTotal toppings: {pizza_toppings_count}") #confirms total number of toppings
+print(f"Total cost: ${pizza_toppings_count * topping_price + base_price:.2f}") #confirms total cost of pizza with toppings and base price
