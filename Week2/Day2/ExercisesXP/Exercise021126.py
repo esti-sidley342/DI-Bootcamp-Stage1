@@ -28,3 +28,27 @@ if guess == random_number:
     print("Success!") #prints a message if the guess is correct
 else:
     print(f"Fail! You number: {guess}, Random number: {random_number}") #prints a message if the guess is incorrect
+
+#Exercise 5
+def make_shirt(size="Large", text="I love Python"):
+    print(f"The shirt size is {size} and the message is '{text}'.") #prints a message about the shirt size and message
+make_shirt() #calls the function with default arguments
+make_shirt(size="medium") #calls the function with size argument and default text argument
+make_shirt(size="small", text="Data Analysis is a slay queen") #calls the function with size and text arguments
+make_shirt(size="small", text="Hello!") #calls the function with size and text arguments
+
+#Exercise 6
+magician_names = ['Harry Houdini', 'David Blaine', 'Cris Angel'] #creates a list of magician names
+def show_magicians(magician_list): #defines a function that takes a list of magician names as an argument
+    for magician in magician_list: #iterates through the list of magician names
+        print(magician) #prints each magician name in the list
+
+def make_great(magician_list): #defines a function that takes a list of magician names as an argument
+    for i in range(len(magician_list)): #iterates through the list of magician names using their index
+        magician_list[i] = "The Great " + magician_list[i] #adds "The Great" to the beginning of each magician name in the list
+
+show_magicians(magician_names) #calls the function to show the original list of magician names
+
+make_great(magician_names) #calls the function to modify the list of magician names by adding "The Great" to each name
+
+show_magicians(magician_names) #calls the function to show the modified list of magician names
