@@ -52,3 +52,56 @@ show_magicians(magician_names) #calls the function to show the original list of 
 make_great(magician_names) #calls the function to modify the list of magician names by adding "The Great" to each name
 
 show_magicians(magician_names) #calls the function to show the modified list of magician names
+
+#Exercise 7
+
+import random
+
+def get_random_temp(month):
+    # Winter: Dec, Jan, Feb
+    if month in [12, 1, 2]:
+        season = "Winter"
+        temperature = random.uniform(-10, 10)
+
+    # Spring: Mar, Apr, May
+    elif month in [3, 4, 5]:
+        season = "Spring"
+        temperature = random.uniform(5, 20)
+
+    # Summer: Jun, Jul, Aug
+    elif month in [6, 7, 8]:
+        season = "Summer"
+        temperature = random.uniform(20, 40)
+
+    # Fall: Sep, Oct, Nov
+    elif month in [9, 10, 11]:
+        season = "Fall"
+        temperature = random.uniform(5, 25)
+
+    else:
+        raise ValueError("Invalid month. Please enter a number between 1 and 12.")
+
+    return temperature, season
+
+
+def main():
+    month = int(input("Enter the month as a number (1-12): "))
+
+    temperature, season = get_random_temp(month)
+
+    print(f"Season: {season}")
+    print(f"The temperature right now is {temperature:.1f} degrees Celsius.")
+
+    if temperature < 0:
+        print("Brrr, that’s freezing! Wear some extra layers today.")
+    elif 0 <= temperature < 16:
+        print("Quite chilly! Don't forget your coat.")
+    elif 16 <= temperature < 23:
+        print("Nice weather.")
+    elif 23 <= temperature <= 32:
+        print("A bit warm, stay hydrated.")
+    else:
+        print("It's really hot! Stay cool.")
+
+
+main()
