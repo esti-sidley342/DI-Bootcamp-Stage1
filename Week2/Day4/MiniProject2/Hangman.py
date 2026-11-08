@@ -5,6 +5,7 @@ word = random.choice(wordslist)
 
 # Hangman stages (0-6 wrong guesses)
 hangman_stages = [
+    #adds gallows and head, body, arms, and legs as the player makes wrong guesses
     """
      -----
      |   |
@@ -22,7 +23,7 @@ hangman_stages = [
          |
          |
     =========
-    """,
+    """, 
     """
      -----
      |   |
@@ -71,10 +72,10 @@ hangman_stages = [
 ]
 
 def play_hangman():
-    word = random.choice(wordslist)
-    guessed_letters = []
-    wrong_guesses = 0
-    max_wrong = 6
+    word = random.choice(wordslist) #chooses a random word from the list
+    guessed_letters = [] 
+    wrong_guesses = 0 #number of wrong guesses made by the player
+    max_wrong = 6 #max wrong guesses before the game ends
 
     print("Welcome to Hangman!")
 
@@ -86,34 +87,34 @@ def play_hangman():
         # Build word display
         display_word = ""
 
-        for letter in word:
+        for letter in word: #goes through each letter in the word and checks if it has been guessed
             if letter == " ":
                 display_word += " "
-            elif letter in guessed_letters:
+            elif letter in guessed_letters: 
                 display_word += letter
             else:
                 display_word += "_"
 
-        print("Word:", display_word)
+        print("Word:", display_word) #displays the current state of the word with guessed letters and underscores for unguessed letters
 
-        # Win condition
+        # Congratulates the player if they've won and confirms the word
         if "_" not in display_word:
             print("\n🎉 Congratulations! You guessed the word:", word)
             return
 
-        guess = input("\nEnter a letter: ").lower()
+        guess = input("\nEnter a letter: ").lower() #asks the player to input a letter and converts it to lowercase
 
         # Input validation
-        if len(guess) != 1 or not guess.isalpha():
-            print("Please enter a single letter.")
+        if len(guess) != 1 or not guess.isalpha(): #checks if the input is a single letter and if it is an alphabetic character
+            print("Please enter a single letter.") 
             continue
 
         if guess in guessed_letters:
-            print(f"You have already guessed '{guess}'. Try a different letter.")
-            print("Guessed letters:", ", ".join(sorted(guessed_letters)))
+            print(f"You have already guessed '{guess}'. Try a different letter.") #if the letter has already been guessed, it informs the player and shows the guessed letters
+            print("Guessed letters:", ", ".join(sorted(guessed_letters))) #confirms the guessed letters in alphabetical order
             continue
 
-        guessed_letters.append(guess)
+        guessed_letters.append(guess) #adds the guessed letter to the list of guessed letters
 
         # Check guess
         if guess in word:
@@ -123,9 +124,9 @@ def play_hangman():
             print("❌ Wrong guess!")
 
     # Final stage (fully drawn hangman)
-    print(hangman_stages[wrong_guesses])
+    print(hangman_stages[wrong_guesses]) 
     print("\n💀 Game Over!")
-    print("The word was:", word)
+    print("The word was:", word) #prints word if the player loses
 
 # Start the game
 play_hangman()
