@@ -1,11 +1,11 @@
 MATRIX_STR = '''
-7ii
-Tsx
-h%?
-i #
-sM 
+7ir
+Tsi
+h%x
+i ?
+sM# 
 $a 
-#t%''' 
+#t%'''   
 
 # Step 1: Convert matrix_string to a 2D list (matrix)
 matrix = [list(row) for row in MATRIX_STR.strip().splitlines()]
@@ -15,47 +15,62 @@ print(matrix)
 
 # Step 2: Iterate through columns
 # ... code to iterate through columns ...
-rows = len(matrix)
-cols = len(matrix[0])
+column_text = "" 
 
-for col in range(cols):
-    print(f"Column {col}: ", end="")
-    for row in range(rows):
-        print(matrix[row][col], end="")
-    print()
+rows = len(matrix) #deal with rows
+cols = len(matrix[0]) #deal with columns
+
+for col in range(cols): #for each column, start from the first column and move to the next column
+    for row in range(rows):  #loop through rows
+        column_text += matrix[row][col] #add the character to column_text
+
+print("Column-wise traversal:")
+print(column_text)
 
 # Step 3: Filter alpha characters
 # ... code to filter alpha characters ...
-matrix = [list(row) for row in MATRIX_STR.strip().splitlines()]
-
 temp = ""
 
-rows = len(matrix)
-cols = len(matrix[0])
+for char in column_text: #loop through each character in column_text
+    if char.isalpha(): #check if the character is an alphabet
+        temp += char #add the character to temp string if it is an alphabet
 
-for col in range(cols):
-    for row in range(rows):
-        char = matrix[row][col]
+print("\nAlpha characters only:")
+print(temp)
 
-        if char.isalpha():
-            temp += char
+for col in range(cols): #loop through each column
+    for row in range(rows): #loop through each row
+        char = matrix[row][col] #get the character at the current row and column
+
+        if char.isalpha(): #check if the character is an alphabet
+            temp += char #add the character to temp string if it is an alphabet
 
 print(temp)
 
 # Step 4: Replace symbols with spaces
-def decoded_message(matrix):
+def decoded_message(text): 
     result = ""
+    symbol_found = False
 
-    rows = len(matrix)
-    cols = len(matrix[0])
+    for char in text:
 
-    for col in range(cols):
-        for row in range(rows):
-            char = matrix[row][col]
-            result += char if char.isalpha() else " "
+        if char.isalpha():
 
-    return " ".join(result.split())
+            if symbol_found and result:
+                result += " "
+
+            result += char
+            symbol_found = False #if the character is an alphabet, set symbol_found to False
+
+        else:
+            symbol_found = True #if the character is not an alphabet, set symbol_found to True and add a space to the result
+
+    return result
+
 # ... code to replace symbols with spaces ...
 
 # Step 5: Print the decoded message
-print(decoded_message)
+message = decoded_message(column_text)
+
+print("\nDecoded message:")
+print(message)
