@@ -1,0 +1,121 @@
+https://www.buzzfeednews.com/article/peteraldhous/extreme-weather-climate-change-missing-deaths
+
+This story looks at how official records for climate related and extreme weather event deaths were significantly undercounted in official figures. Data analysis was used by looking at various data sources to highlight that climate related deaths are far higher than what is officially publicised.
+
+What data was analysed?
+
+The journalists and researchers analysed multiple datasets, including:
+
+- NOAA Storm Events Database
+	- Official records of weather events and associated deaths in the United States.
+- CDC mortality data
+	- Death records compiled from death certificates across US states.
+- EM-DAT international disaster database
+	- Global disaster records used by organisations such as the World Meteorological Organization.
+- State-level mortality records
+	- Death counts from Washington, Oregon, Texas, Puerto Rico, and other locations affected by extreme weather events.
+- Historical mortality data (2015-2019)
+	- Used as a baseline for estimating how many deaths would normally occur in a given week.
+
+Methods that were used
+1. Excess Deaths Analysis
+
+The key analytical method was excess mortality analysis.
+
+Researchers estimated:
+
+The number of deaths expected under normal conditions.
+The number of deaths actually recorded during and after extreme weather events.
+The difference between the two numbers represented "excess deaths" likely associated with the event.
+
+This is the same general approach that has been widely used to estimate the true death toll of COVID-19.
+
+2. Statistical Modelling
+
+BuzzFeed News:
+
+Built statistical models using CDC mortality data from 2015-2019.
+Used the models to predict expected deaths for specific weeks and locations.
+Compared those predictions with observed deaths after removing deaths directly attributed to COVID-19.
+
+The models were independently reviewed by three experts in excess-death analysis.
+
+3. Data Comparison Across Sources
+
+The investigation compared:
+
+- NOAA event-based counts,
+- CDC death-certificate counts,
+- EM-DAT disaster counts,
+- Excess-death estimates.
+
+This revealed large inconsistencies between official databases.
+
+Key findings from the analysis
+Pacific Northwest Heat Wave (2021)
+
+Official records reported far fewer deaths than the analysis suggested.
+
+Washington State's official heat-related death count was 119.
+The excess-deaths analysis estimated more than 440 deaths in Washington during the heat wave week.
+Another approximately 230 deaths were estimated in Oregon.
+Total estimated deaths were around 670, far exceeding official counts.
+Texas Winter Storm (2021)
+Texas initially reported 151 weather-related deaths.
+BuzzFeed's analysis estimated over 700 excess deaths, later revised to more than 750 excess deaths as additional data became available.
+Death Certificate Limitations
+
+The analysis found that many weather-related deaths were recorded as:
+- Cardiovascular disease
+- Diabetes,
+- Other medical conditions
+
+rather than as deaths caused by heat or cold exposure. This meant official weather-death statistics missed many vulnerable individuals whose conditions were worsened by extreme temperatures. These were very easily recorded as "natural deaths", in the same way that many covid related deaths would have been (such as "multiple organ failure", if a covid infection wasn't recorded against the death even though covid caused the multiple organ failure).
+
+Outcomes and decisions driven by the analysis
+
+The investigation's analysis led to several important conclusions and recommendations:
+
+1. Official death counts are inadequate
+
+The study showed that current government systems do not accurately measure deaths from extreme weather and climate change, leading to substantial undercounting.
+
+2. Need for improved death-reporting systems
+
+Experts cited in the story argued for:
+
+Better standardisation of death certificates,
+More consistent reporting by coroners and medical examiners,
+Recording contributing environmental factors, not just underlying causes of death.
+
+3. Adoption of advanced analytical methods
+
+The article concludes that governments should incorporate:
+
+- Excess-deaths analysis,
+- Epidemiological modelling,
+- More sophisticated climate-health surveillance methods.
+
+4. Better public policy and preparedness
+
+Accurate mortality estimates can help authorities to:
+
+- Identify vulnerable populations,
+- Improve warning systems,
+- Design heat-response programmes,
+- Plan disaster interventions,
+- Allocate resources more effectively.
+
+5. Increased political accountability
+
+Experts argued that undercounting deaths reduces pressure on governments to act on climate adaptation and infrastructure weaknesses. Better data would provide stronger evidence for policy changes and disaster-risk reduction measures.
+
+Summary
+Data analysed - NOAA storm data, CDC mortality records, EM-DAT disaster data, state death records, historical mortality data
+Methods	- Excess mortality analysis, statistical modelling, cross-database comparison
+Main finding - Official databases substantially underestimate deaths from extreme weather events
+Key examples - Pacific Northwest heat wave and Texas winter storm
+Outcomes - Calls for improved death reporting, adoption of excess-death methodologies, stronger climate adaptation and public-health planning
+
+Overall, the investigation used statistical modelling and excess-death analysis to reveal hidden mortality associated with climate-related extreme weather, demonstrating shortcomings in official reporting systems and supporting calls for better measurement and policy responses. Without data analysis, the full impact of climate change and extreme weather events would go unnoticed, because most deaths can simply be attributed to natural causes if context isn't taken into account (for example - old age related fatal medical events, but the person may have lived longer without being subjected to extreme heat). This would mean that no mitigating policies are implemented, such as assistance for the vulnerable/prioritising them in these scenarios, or changing building regulations to protect against extreme weather events. Carbon emission targets may also not be looked into seriously if their impact isn't known in the immediate term. By highlighting the excess deaths, this influences decision making in a wide number of areas.
+
