@@ -1,7 +1,5 @@
 import pandas as pd
 
-import pandas as pd
-
 # Define the file path to the CSV dataset
 path = r"C:\Users\USER1\Downloads\Data Science Job Salary dataset\Data Science Job Salary dataset\datascience_salaries.csv"
 
@@ -61,37 +59,7 @@ print(pca.explained_variance_ratio_)
 # Display the total variance explained by both principal components
 print("Total variance explained:", pca.explained_variance_ratio_.sum())
 
-# -----------------------------
-# PCA PROCESS (alternative version)
-# -----------------------------
-
-# Keep only numerical columns
-numeric_df = df.select_dtypes(include='number')
-
-# Standardise the numerical data
-scaler = StandardScaler()
-scaled_data = scaler.fit_transform(numeric_df)
-
-# Reduce the data to 2 principal components
-pca = PCA(n_components=2)
-principal_components = pca.fit_transform(scaled_data)
-
-# Store the reduced data in a new DataFrame
-pca_df = pd.DataFrame(
-    principal_components,
-    columns=['PC1', 'PC2']
-)
-
-# Display the first few rows of the reduced dataset
-print(pca_df.head())
-
-# Show how much information was retained after dimensionality reduction
-print("Explained variance ratio:", pca.explained_variance_ratio_)
-print("Total variance explained:", pca.explained_variance_ratio_.sum())
-
-# -----------------------------
 # Salary Analysis by Experience Level
-# -----------------------------
 
 # Group data by experience level and calculate average and median salary
 salary_stats = df.groupby('experience_level')['salary'].agg(
