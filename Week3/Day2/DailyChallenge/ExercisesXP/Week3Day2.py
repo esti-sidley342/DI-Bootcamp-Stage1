@@ -15,7 +15,7 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 #import file
 # Read the Titanic CSV file into a pandas DataFrame
 df = pd.read_csv(
-    r"C:\Users\USER1\Bootcamp-files\DI_Bootcamp-Stage1\Week3\Day2\train\train.csv"
+    r"train.csv"
 )
 
 
